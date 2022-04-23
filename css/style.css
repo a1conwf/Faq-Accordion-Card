@@ -28,7 +28,7 @@ h1 {
 
 .container {
   max-width: 300px;
-  margin: 14.8rem auto 8.5rem;
+  margin: 14.8rem auto 0;
   padding: 0;
 }
 
@@ -135,6 +135,7 @@ h1 {
   }
   .container {
     max-width: 920px;
+    margin: 0;
   }
   .container .card {
     height: 509px;
