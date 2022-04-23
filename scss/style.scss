@@ -1,0 +1,191 @@
+@import "./globals";
+@import "./variables";
+@import "./mixins";
+
+//Container
+.container {
+    max-width: 300px;
+    margin: 14.8rem auto 8.5rem;
+    padding: 0;
+
+    //Card
+    .card {
+        height: 560px;
+        background-color: #fff;
+        box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+        border: none;
+        border-radius: 2.3rem;
+
+        //Mobile img
+        &__img.mob {
+            width: 237px;
+            height: 180px;
+            position: relative;
+            top: -100px;
+            left: 30px;
+        }
+
+        //Mobile background pattern
+        .bg_pattern_mob {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+        }
+
+        //Desktop img, box img
+        &__img.desktop,
+        &__box {
+            display: none;
+        }
+
+        //Card Faq
+        &__faq {
+            margin-top: -4rem;
+            padding: 0 2.4rem;
+
+            h1 {
+                margin-bottom: 3rem;
+                text-align: center;
+            }
+
+            //Accordion
+            .accordion {
+                max-width: 279px;
+                margin: 0 auto;
+
+                //Accordion item
+                &-item {
+                    border: none;
+                    border-bottom: 1px solid #E8E8EA;
+
+                    //Accordion btn
+                    .accordion-button {
+                        padding: 0 0 1.8rem;
+                        font-size: 1.3rem;
+                        line-height: 1.6rem;
+                        color: $mediumBlue;
+
+                        &:not(.collapsed),
+                        &:focus {
+                            background-color: #fff;
+                            box-shadow: none;
+                        }
+
+                        &:not(.collapsed) {
+                            color: $darkBlue;
+                            font-weight: 700;
+                        }
+
+                        &::after {
+                            filter: invert(69%) sepia(26%) saturate(5609%) hue-rotate(325deg) brightness(101%) contrast(91%);
+                        }
+
+                        &:not(.collapsed)::after {
+                            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                        }
+                    }
+                }
+
+                //Accordion header
+                &-header {
+                    padding-top: 1.8rem;
+                }
+
+                #headingOne {
+                    padding-top: 0;
+                }
+
+                //Accordion body
+                &-body {
+                    padding: 0 0 1.8rem;
+                    font-size: 1.2rem;
+                    line-height: 1.8rem;
+                    color: $lightBlue;
+                }
+            }
+        }
+    }
+}
+
+//Media queries
+@media screen and (min-width: 992px) {
+    body {
+        @include flexCenter;
+    }
+
+    //Container
+    .container {
+        max-width: 920px;
+
+        //Card
+        .card {
+            height: 509px;
+            flex-direction: row;
+
+            //Img container
+            &__img__container {
+                background-image: url("../images/bg-pattern-desktop.svg");
+                background-repeat: no-repeat;
+                background-position: 115% 70%;
+                overflow: hidden;
+            }
+
+            //Mobile imgs
+            &__img.mob,
+            .bg_pattern_mob {
+                display: none;
+            }
+
+            //Desktop img
+            &__img.desktop {
+                display: block;
+                width: 472px;
+                height: 359px;
+                position: relative;
+                top: 70px;
+                left: -80px;
+            }
+
+            //Box img
+            &__box {
+                display: block;
+                position: absolute;
+                left: -10%;
+                bottom: 23%;
+                z-index: 1;
+            }
+
+            //Card Faq
+            &__faq {
+                margin-top: 6.5rem;
+                padding: 0;
+
+                h1 {
+                    margin-bottom: 4.3rem;
+                    text-align: left;
+                }
+
+                //Accordion
+                .accordion {
+                    max-width: 350px;
+
+                    //Accordion item
+                    &-item {
+
+                        //Accordion btn
+                        .accordion-button {
+                            font-size: 1.4rem;
+                            line-height: 1.7rem;
+                            margin-right: 7.2rem;
+                        }
+                    }
+
+                    //Accordion body
+                    &-body {
+                        max-width: 315px;
+                    }
+                }
+            }
+        }
+    }
+}

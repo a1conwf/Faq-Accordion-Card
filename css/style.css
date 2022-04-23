@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-size: 1.2rem;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  background: -webkit-gradient(linear, left top, left bottom, from(#B068E9), to(#6463E7));
+  background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 700;
+  color: #1E1F36;
+}
+
+.container {
+  max-width: 300px;
+  margin: 14.8rem auto 8.5rem;
+  padding: 0;
+}
+
+.container .card {
+  height: 560px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+          box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+  border: none;
+  border-radius: 2.3rem;
+}
+
+.container .card__img.mob {
+  width: 237px;
+  height: 180px;
+  position: relative;
+  top: -100px;
+  left: 30px;
+}
+
+.container .card .bg_pattern_mob {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+}
+
+.container .card__img.desktop, .container .card__box {
+  display: none;
+}
+
+.container .card__faq {
+  margin-top: -4rem;
+  padding: 0 2.4rem;
+}
+
+.container .card__faq h1 {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.container .card__faq .accordion {
+  max-width: 279px;
+  margin: 0 auto;
+}
+
+.container .card__faq .accordion-item {
+  border: none;
+  border-bottom: 1px solid #E8E8EA;
+}
+
+.container .card__faq .accordion-item .accordion-button {
+  padding: 0 0 1.8rem;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  color: #4B4C5F;
+}
+
+.container .card__faq .accordion-item .accordion-button:not(.collapsed), .container .card__faq .accordion-item .accordion-button:focus {
+  background-color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.container .card__faq .accordion-item .accordion-button:not(.collapsed) {
+  color: #1E1F36;
+  font-weight: 700;
+}
+
+.container .card__faq .accordion-item .accordion-button::after {
+  -webkit-filter: invert(69%) sepia(26%) saturate(5609%) hue-rotate(325deg) brightness(101%) contrast(91%);
+          filter: invert(69%) sepia(26%) saturate(5609%) hue-rotate(325deg) brightness(101%) contrast(91%);
+}
+
+.container .card__faq .accordion-item .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.container .card__faq .accordion-header {
+  padding-top: 1.8rem;
+}
+
+.container .card__faq .accordion #headingOne {
+  padding-top: 0;
+}
+
+.container .card__faq .accordion-body {
+  padding: 0 0 1.8rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #787887;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container {
+    max-width: 920px;
+  }
+  .container .card {
+    height: 509px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .container .card__img__container {
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: 115% 70%;
+    overflow: hidden;
+  }
+  .container .card__img.mob,
+  .container .card .bg_pattern_mob {
+    display: none;
+  }
+  .container .card__img.desktop {
+    display: block;
+    width: 472px;
+    height: 359px;
+    position: relative;
+    top: 70px;
+    left: -80px;
+  }
+  .container .card__box {
+    display: block;
+    position: absolute;
+    left: -10%;
+    bottom: 23%;
+    z-index: 1;
+  }
+  .container .card__faq {
+    margin-top: 6.5rem;
+    padding: 0;
+  }
+  .container .card__faq h1 {
+    margin-bottom: 4.3rem;
+    text-align: left;
+  }
+  .container .card__faq .accordion {
+    max-width: 350px;
+  }
+  .container .card__faq .accordion-item .accordion-button {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin-right: 7.2rem;
+  }
+  .container .card__faq .accordion-body {
+    max-width: 315px;
+  }
+}
